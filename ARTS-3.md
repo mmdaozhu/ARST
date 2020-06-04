@@ -129,9 +129,9 @@ obstacle | n. 障碍，干扰，妨碍；障碍物
 inconsistency | n. 不一致；易变
 
 #### **【Comments and Conclusions】**
-　　Creating redundancy in a system can remove single points of failure and provide a backup or spare functionality if needed in a crisis. Another key part of service redundancy is creating a shared-nothing architecture.
-　　When there may be a very large data sets that are unable to fit on a single server. To scale horizontally is to add more nodes.
-　　Of course there are challenges, One of the key issues is data locality, another potential issues comes in the form of inconsistency
+　　Creating redundancy in a system can remove single points of failure and provide a backup or spare functionality if needed in a crisis. Another key part of service redundancy is creating a shared-nothing architecture.  
+　　When there may be a very large data sets that are unable to fit on a single server. To scale horizontally is to add more nodes.  
+　　Of course there are challenges, One of the key issues is data locality, another potential issues comes in the form of inconsistency.  
 
 ###  <font color=red>tips：Docker 常用命令</font>
 
@@ -182,11 +182,11 @@ docker ps
 ###  <font color=red>Share: 剖析C++ std::sort函数源码</font>
 
 #### **【快排的原理】**
-　　首先我们先了解下排序算法中最经典的算法：快速排序。几乎所有的编程语言都会提供排序函数，大多数都是基于快速排序算法实现的，比如我们要讲的std::sort函数。
-　　快排的思想是这样的：如果要排序数组中下标从p到r之间的一组数据，我们选择p到r之间的任意一个数据作为pivot（分区点）。
-　　我们遍历p到r之间的数据，将小于pivot的放到左边，将大于pivot的放到右边，将pivot放到中间。经过这一个步骤之后，数组p到r之间的数据被分成了三部分，前面p到q-1之间的都小于pivot，中间是pivot，后面的q+1到r之间大于pivot。
-　　根据分治递归的处理思想，我们可以递归排序下标p到q-1之间的数据和下标q+1到r之间的数据，直到区间缩小为1，就说明所有的数据都有序了。
-　　快排的时间复杂度是O(nlogn)的，是原地排序和不稳定排序。
+　　首先我们先了解下排序算法中最经典的算法：快速排序。几乎所有的编程语言都会提供排序函数，大多数都是基于快速排序算法实现的，比如我们要讲的std::sort函数。  
+　　快排的思想是这样的：如果要排序数组中下标从p到r之间的一组数据，我们选择p到r之间的任意一个数据作为pivot（分区点）。  
+　　我们遍历p到r之间的数据，将小于pivot的放到左边，将大于pivot的放到右边，将pivot放到中间。经过这一个步骤之后，数组p到r之间的数据被分成了三部分，前面p到q-1之间的都小于pivot，中间是pivot，后面的q+1到r之间大于pivot。  
+　　根据分治递归的处理思想，我们可以递归排序下标p到q-1之间的数据和下标q+1到r之间的数据，直到区间缩小为1，就说明所有的数据都有序了。  
+　　快排的时间复杂度是O(nlogn)的，是原地排序和不稳定排序。  
 
 #### **【快排的实现】**
 　　我们现在用c++来实现一遍，取一组数据中的最后一个数据作为分区点。
