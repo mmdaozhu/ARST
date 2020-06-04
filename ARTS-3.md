@@ -189,7 +189,7 @@ docker ps
 　　快排的时间复杂度是O(nlogn)的，是原地排序和不稳定排序。  
 
 #### **【快排的实现】**
-　　我们现在用c++来实现一遍，取一组数据中的最后一个数据作为分区点。
+　　我们现在用c++来实现一遍，取一组数据中的最后一个数据作为分区点。  
 ```c++
 void quicksort(int p, int r, std::vector<int>& nums) {
     if (p >= r) {
@@ -207,10 +207,10 @@ void quicksort(int p, int r, std::vector<int>& nums) {
     quicksort(i + 1, r, nums);
 }
 ```
-　　快排的实现最重要的是i指针，每一轮迭代后，i指针指向的元素始终大于(等于)分区点的元素。迭代结束后，交换i指针指向的元素和分区点的元素。记住这一点，快排就很好实现了。
+　　快排的实现最重要的是i指针，每一轮迭代后，i指针指向的元素始终大于(等于)分区点的元素。迭代结束后，交换i指针指向的元素和分区点的元素。记住这一点，快排就很好实现了。  
 
 #### **【std::sort函数源码剖析】**
-　　首先我们来看下sort函数的源码，里面调用了std::\_\_sort函数，传递了\_\_gnu_cxx::\_\_ops::\_\_iter_less_iter()函数对象，使得数列从小到大排序。
+　　首先我们来看下sort函数的源码，里面调用了std::\_\_sort函数，传递了\_\_gnu_cxx::\_\_ops::\_\_iter_less_iter()函数对象，使得数列从小到大排序。  
 ```c++
 // /usr/include/c++/7.4.0/bits/stl_algo.h
 
@@ -244,7 +244,7 @@ void quicksort(int p, int r, std::vector<int>& nums) {
     }
 ```
 
-　　__sort函数调用了内省排序和插入排序。内省排序首先从快速排序开始，当递归深度超过一定深度后转为堆排序。std::\_\_lg函数是用来计算递归深度。
+　　__sort函数调用了内省排序和插入排序。内省排序首先从快速排序开始，当递归深度超过一定深度后转为堆排序。std::\_\_lg函数是用来计算递归深度。  
 ```c++
 // /usr/include/c++/7.4.0/bits/stl_algo.h
 
@@ -265,11 +265,11 @@ void quicksort(int p, int r, std::vector<int>& nums) {
 ```
 
 　　我们来分析一下内省排序\_\_introsort_loop函数。
-　　while循环里面的判断条件是排序区间大小。如果太小了，就直接退化成插入排序了。在小规模数据面前，O(n<sup>2</sup>)的时间复杂度的算法并不一定比O(nlogn)的算法执行时间长。
-　　当递归深度超过一定的深度，则使用std::__partial_sort(堆排序)。堆排序就不详细展开了。
-　　\_\_unguarded_partition_pivot函数是选择三数取中作为分区点，并将中位数放在数列的开头。
-　　接着递归调用\_\_introsort_loop函数。
-　　最后我们来重点看下第21行代码，这边的实现和我上面实现的排序算法有点不一样。它是通过循环来处理右边子序列的，这样的一个好处就是减少函数的调用。令人惊叹！
+　　while循环里面的判断条件是排序区间大小。如果太小了，就直接退化成插入排序了。在小规模数据面前，O(n<sup>2</sup>)的时间复杂度的算法并不一定比O(nlogn)的算法执行时间长。  
+　　当递归深度超过一定的深度，则使用std::__partial_sort(堆排序)。堆排序就不详细展开了。  
+　　\_\_unguarded_partition_pivot函数是选择三数取中作为分区点，并将中位数放在数列的开头。  
+　　接着递归调用\_\_introsort_loop函数。  
+　　最后我们来重点看下第21行代码，这边的实现和我上面实现的排序算法有点不一样。它是通过循环来处理右边子序列的，这样的一个好处就是减少函数的调用。令人惊叹！  
 ```c++
 // /usr/include/c++/7.4.0/bits/stl_algo.h
 
@@ -311,8 +311,8 @@ void quicksort(int p, int r, std::vector<int>& nums) {
     }
 ```
 
-　　接着我们来看看__unguarded_partition函数，也就是快速排序的主体部分。
-　　它使用first和last两个指针不断交换放错位置的元素，直到first和last相互交错为止，最后返回右边区间的起始位置。
+　　接着我们来看看__unguarded_partition函数，也就是快速排序的主体部分。  
+　　它使用first和last两个指针不断交换放错位置的元素，直到first和last相互交错为止，最后返回右边区间的起始位置。  
 ```c++
 // /usr/include/c++/7.4.0/bits/stl_algo.h
 
@@ -337,4 +337,4 @@ void quicksort(int p, int r, std::vector<int>& nums) {
 	}
     }
 ```
-　　std::\_\_sort函数中调完std::\_\_introsort_loop函数之后，我们的数列是相对有序的，最后再使用插入排序。
+　　std::\_\_sort函数中调完std::\_\_introsort_loop函数之后，我们的数列是相对有序的，最后再使用插入排序。  
