@@ -264,7 +264,7 @@ void quicksort(int p, int r, std::vector<int>& nums) {
     }
 ```
 
-　　我们来分析一下内省排序\_\_introsort_loop函数。
+　　我们来分析一下内省排序\_\_introsort_loop函数。  
 　　while循环里面的判断条件是排序区间大小。如果太小了，就直接退化成插入排序了。在小规模数据面前，O(n<sup>2</sup>)的时间复杂度的算法并不一定比O(nlogn)的算法执行时间长。  
 　　当递归深度超过一定的深度，则使用std::__partial_sort(堆排序)。堆排序就不详细展开了。  
 　　\_\_unguarded_partition_pivot函数是选择三数取中作为分区点，并将中位数放在数列的开头。  

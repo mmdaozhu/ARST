@@ -12,8 +12,8 @@ tags:
 #### **【LeetCode:169. Majority Element】**
 
 ##### 　　Description:
-　　Given an array of size n, find the majority element. The majority element is the element that appears more than [n/2] times.
-　　You may assume that the array is non-empty and the majority element always exist in the array.
+　　Given an array of size n, find the majority element. The majority element is the element that appears more than [n/2] times.  
+　　You may assume that the array is non-empty and the majority element always exist in the array.  
 
 ##### 　　Example 1:
 ```sh
@@ -108,8 +108,8 @@ whereas | conj. 然而；鉴于
 outage | n. 中断
 
 #### **【Comments and Conclusions】**
-　　When considering scalable system design, it helps to decouple functionality and think about each part of the system as its own service with a clearly defined interface. In practice, systems designed in this way are said to have a SOA.
-　　advantage: 1.decouple operations of system. 2.isolate problems.
+　　When considering scalable system design, it helps to decouple functionality and think about each part of the system as its own service with a clearly defined interface. In practice, systems designed in this way are said to have a SOA.  
+　　advantage: 1.decouple operations of system. 2.isolate problems.  
 
 
 ###  <font color=red>tips：C++ 简单编译命令</font>
@@ -140,18 +140,18 @@ g++ -std=c++11 -Wall -g -I /var/boost_1_73_0/include/ test.cpp -o test -L/var/bo
 ###  <font color=red>Share：C++ Boost Library 的安装和使用</font>
 
 #### **【下载】**
-Boost版本：1.73.0
-下载链接：https://www.boost.org/users/history/version_1_73_0.html
+Boost版本：1.73.0  
+下载链接：https://www.boost.org/users/history/version_1_73_0.html  
 
 #### **【环境】**
-docker
-Linux: Ubuntu-18.04
-gcc: 7.4.0 
-Boost: 1.73.0
+docker  
+Linux: Ubuntu-18.04  
+gcc: 7.4.0  
+Boost: 1.73.0  
 
 #### **【安装】**
-　　大部分Boost libraires是header-only的，不需要编译。
-　　少部分Boost libraires是单独编译的，下面是编译这些库的简单步骤。
+　　大部分Boost libraires是header-only的，不需要编译。  
+　　少部分Boost libraires是单独编译的，下面是编译这些库的简单步骤。  
 ```sh
 cd path/to/boost_1_73_0
 ./bootstrap.sh --prefix=path/to/installation/prefix
@@ -162,7 +162,7 @@ cd path/to/boost_1_73_0
 
 ##### 使用header-only的Boost libraires
 
-　　下面是一个简单的c++程序：
+　　下面是一个简单的c++程序：  
 ```cpp
 #include <boost/lambda/lambda.hpp>
 #include <iostream>
@@ -179,11 +179,11 @@ int main()
 }
 ```
 
-　　编译：
+　　编译：  
 ```sh
 g++ -I /var/boost_1_73_0/include/ example.cpp -o example
 ```
-　　运行：
+　　运行：  
 ```sh
 1 2 3
 3 6 9
@@ -191,7 +191,7 @@ g++ -I /var/boost_1_73_0/include/ example.cpp -o example
 
 ##### 使用separately-compiled的Boost libraires
 
-　　将一个简单的c++程序链接一个boost库：
+　　将一个简单的c++程序链接一个boost库：  
 ```cpp
 #include <boost/regex.hpp>
 #include <iostream>
@@ -212,17 +212,17 @@ int main()
 }
 ```
 
-　　编译：
+　　编译：  
 ```sh
 g++ -I /var/boost_1_73_0/include/ example1.cpp -o example1 -L/var/boost_1_73_0/lib/ -lboost_regex
 ```
-　　运行：
-　　1. 先加入库的搜索路径。
+　　运行：  
+　　1. 先加入库的搜索路径。  
 ```sh
 export LD_LIBRARY_PATH=/var/boost_1_73_0/lib/
 ```
 
-　　2. 执行程序，并贴段字符串：
+　　2. 执行程序，并贴段字符串：  
 ```sh
 To: George Shmidlap
 From: Rita Marlowe
@@ -231,7 +231,7 @@ Subject: Will Success Spoil Rock Hunter?
 See subject.
 ```
 
-　　3. 结果：
+　　3. 结果：  
 ```sh
 Will Success Spoil Rock Hunter?
 ```

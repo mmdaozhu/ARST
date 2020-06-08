@@ -9,9 +9,9 @@ tags:
 
 ### 什么是ARTS？
 ![hello](/ARTS-1/1.jpg)
-　　来自耗子叔的建议：
-　　完成一个 ARTS 的时间不要超过 5 个小时，尽题控制在 2-3 个小时以内，少了你投入不够，多了难以坚持。
-　　这 2-3 个小时的时间分配是，算法题 30-60 分钟，英文文章 30 分钟，Tip 回想一下本周工作中学到的一个小技巧（10 分钟），Share思考一个技术观点、社会热点、一个产品或是一个困惑（这个时间应该放在日常），然后花 30-60 分钟写下来。
+　　来自耗子叔的建议：  
+　　完成一个 ARTS 的时间不要超过 5 个小时，尽题控制在 2-3 个小时以内，少了你投入不够，多了难以坚持。  
+　　这 2-3 个小时的时间分配是，算法题 30-60 分钟，英文文章 30 分钟，Tip 回想一下本周工作中学到的一个小技巧（10 分钟），Share思考一个技术观点、社会热点、一个产品或是一个困惑（这个时间应该放在日常），然后花 30-60 分钟写下来。  
 
 ###  <font color=red>Algorithm</font>
 
@@ -114,13 +114,13 @@ facet | n. 面；方面；小平面
 odd | n. 奇数；怪人；奇特的事物
 
 #### **【Comments and Conclusions】**
-　　Here're several key principles that influence the design of large-scale web systems: Availability, Performance, Reliability, Scalability, Manageability and cost.
-　　When designing any sort of web application it it important to consider these key principles, even if it is to acknowledge that a design may sacrifice one or more of them.
+　　Here're several key principles that influence the design of large-scale web systems: Availability, Performance, Reliability, Scalability, Manageability and cost.  
+　　When designing any sort of web application it it important to consider these key principles, even if it is to acknowledge that a design may sacrifice one or more of them.  
 
 ###  <font color=red>tips：Linux命令：压缩和解压</font>
 #### **【zip】**
-　　.zip结尾的文件调用zip程序
-　　压缩：
+　　.zip结尾的文件调用zip程序  
+　　压缩：  
 ```sh
 zip -r test.zip /home/test
 ```
@@ -130,34 +130,34 @@ unzip test.zip
 ```
 
 #### **【tar】**
-　　.tar结尾的文件调用tar程序
-　　压缩：
+　　.tar结尾的文件调用tar程序  
+　　压缩：  
 ```sh
 tar cvf test.tar /home/test
 ```
-　　解压：
+　　解压：  
 ```sh
 tar xvf test.tar
 ```
 
 #### **【tar.gz】**
-　　.tar.gz结尾的文件调用tar程序，然后通过使用-z参数来调用gzip程序
-　　压缩：
+　　.tar.gz结尾的文件调用tar程序，然后通过使用-z参数来调用gzip程序  
+　　压缩：  
 ```sh
 tar zcvf test.tar.gz /home/test
 ```
-　　解压：
+　　解压：  
 ```sh
 tar zxvf test.tar.gz
 ```
 
 #### **【tar.bz2】**
-　　.tar.bz2结尾的文件调用tar程序，然后通过使用-j参数来调用bzip2程序
-　　压缩：
+　　.tar.bz2结尾的文件调用tar程序，然后通过使用-j参数来调用bzip2程序  
+　　压缩：  
 ```sh
 tar jcvf test.tar.bz2 /home/test
 ```
-　　解压：
+　　解压：  
 ```sh
 tar jxvf test.tar.bz2
 ```
@@ -165,8 +165,8 @@ tar jxvf test.tar.bz2
 ###  <font color=red>Share：如何用 C 语言模拟面向对象四大特性？</font>
 
 #### **【封装性】**
-　　C语言没有访问权限控制，程序员只能通过结构体模拟类，将结构体的指针作为参数传入接口函数中。用户通过接口函数来操作结构体，而不是直接操作结构体中的数据。
-　　下面给一个例子：　　
+　　C语言没有访问权限控制，程序员只能通过结构体模拟类，将结构体的指针作为参数传入接口函数中。用户通过接口函数来操作结构体，而不是直接操作结构体中的数据。  
+　　下面给一个例子：  
 ```c++
 #include <stdio.h>
 #include <string.h>
@@ -198,15 +198,15 @@ int main(){
 ```
 
 #### **【抽象性】**
-　　面向对象语言通过接口或者抽象类来实现面向对象的抽象性。
-　　C语言通过函数包裹具体的实现逻辑，提供函数名、文档给用户使用，这本身也是一种抽象。
+　　面向对象语言通过接口或者抽象类来实现面向对象的抽象性。  
+　　C语言通过函数包裹具体的实现逻辑，提供函数名、文档给用户使用，这本身也是一种抽象。  
 
 #### **【继承性】**
-　　C语言通过结构体组合的方式来模拟面向对象的继承性，达到代码复用的目的。
+　　C语言通过结构体组合的方式来模拟面向对象的继承性，达到代码复用的目的。  
 
 #### **【多态性】**
-　　C语言利用函数指针来模拟面向对象的多态性。
-　　例子如下：
+　　C语言利用函数指针来模拟面向对象的多态性。  
+　　例子如下：  
 ```c++
 #include <stdio.h>
 
