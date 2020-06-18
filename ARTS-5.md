@@ -115,10 +115,10 @@ catastrophic | adj. 灾难的；悲惨的；灾难性的，毁灭性的
 　　3.Using a proxy to collapse requests for data that is spatially close together  
 
 　　Index chart:  
-![hello](/ARTS-5/5.png)  
+![hello](/ARTS-5/5.jpg)  
 　　1.Indexes  
 
-![hello](/ARTS-5/6.png)  	
+![hello](/ARTS-5/6.jpg)  	
 　　2.Many layers of indexes  
 
 ###  <font color=orange>tips: Linux命令：xargs简介</font>
