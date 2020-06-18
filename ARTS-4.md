@@ -143,16 +143,16 @@ eviction | n. 逐出；赶出；收回
 #### **【Comments and Conclusions】**
 　　When talking about scaling access to the data, there are many options that you can employ to make this easier: four of the more important ones are caches, proxies, indexex and load balancers.  
 　　Caches chart:  
-![hello](/ARTS-4/4.png)
+![hello](/ARTS-4/4.png)  
 　　1.Inserting a cache on your request layer node  
 
-![hello](/ARTS-4/5.png)
+![hello](/ARTS-4/5.png)  
 　　2.Multiple caches  
 
-![hello](/ARTS-4/6.png)
+![hello](/ARTS-4/6.png)  
 　　3.Global Cache where cache is responsible for retrieval  
 
-![hello](/ARTS-4/7.png)	
+![hello](/ARTS-4/7.png)  
 　　4.Global Cache where request nodes are responsible for retrieval  
 
 ###  <font color=red>Tip: VS Code中C++ formatting</font>
