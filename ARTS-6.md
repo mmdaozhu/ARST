@@ -271,8 +271,7 @@ m_callbacks[T_NETWORK_ADAPTER] = cb;
 　　boost::bind绑定的是一个成员函数，第二个参数是this指针。  
 　　最后执行回调函数：  
 ```c++
-void RModule::EnumInstances(const string &type, RRepository &repo)
-{
+void RModule::EnumInstances(const string &type, RRepository &repo) {
     if (!m_init) {
         InitCallbacks();
         m_init = true;
