@@ -125,9 +125,9 @@ ace | vt. 以发球赢一分；击败
 
 ##### 1. Vertical Scaling
 　　add more resources(CPU/RAM/DISK) to your server as on demand.  
-　　- CPU: cores, L2 Cache
-　　- DISK: PATA, SATA, SAS, ... RAID(HDD use SATA and SAS interface, SSD use SATA, MSATA and M.2 interface)
-　　- RAM
+　　- CPU: cores, L2 Cache  
+　　- DISK: PATA, SATA, SAS, ... RAID(HDD use SATA and SAS interface, SSD use SATA, MSATA and M.2 interface)  
+　　- RAM  
 
 ##### 2. Load Balancing
 　　DNS  
@@ -136,17 +136,17 @@ ace | vt. 以发球赢一分；击败
 　　Using database  　
 
 ##### 4. RAID
-　　- RAID 0: fastest, no redundance.
-　　- RAID 1: consist of data mirroring, write throughput is slower.
-　　- RAID 5: require at least three disks, a tradeoff between RAID 0 and RAID 1.
-　　- RAID 6: fault tolerance up to two failed drives. 
-　　- RAID 10: consist of RAID 0 and RAID 1.
+　　- RAID 0: fastest, no redundance.  
+　　- RAID 1: consist of data mirroring, write throughput is slower.  
+　　- RAID 5: require at least three disks, a tradeoff between RAID 0 and RAID 1.  
+　　- RAID 6: fault tolerance up to two failed drives.  
+　　- RAID 10: consist of RAID 0 and RAID 1.  
 
 ##### 5. Shared Storage
-　　- FC: Fibre Channel
-　　- iSCSI: internet small computer system interface.(protocol)
-　　- MySQL
-　　- NFS: network File System
+　　- FC: Fibre Channel  
+　　- iSCSI: internet small computer system interface.(protocol)  
+　　- MySQL  
+　　- NFS: network File System  
 　
 ###  <font color=orange>tips：Maven POM如何引入外部依赖</font>
 　　POM( Project Object Model，项目对象模型 ) 是 Maven 工程的基本工作单元，是一个XML文件，包含了项目的基本信息，用于描述项目如何构建，声明项目依赖，等等。执行任务或目标时，Maven 会在当前目录中查找 POM。它读取 POM，获取所需的配置信息，然后执行目标。  
