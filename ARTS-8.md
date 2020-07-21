@@ -167,7 +167,162 @@ https://github.com/donnemartin/system-design-primer (https://www.youtube.com/wat
 　　- memcached  
 　　- ...  
 　
-###  <font color=orange>tips：</font>
+###  <font color=orange>tips：Java 注解简介</font>
+　　初学Spring Boot时，发现有好多注解，看的眼花缭乱的，所以想把这块学一学，了解一下其机制。  
+　　学习链接https://www.runoob.com/w3cnote/java-annotation.html  
+
+#### **【Java 注解定义】**
+　　Java 注解（Annotation）又称 Java 标注，是 JDK5.0 引入的一种注释机制。  
+　　Java语言中的类、方法、变量、参数和包等都可以被标注。和Javadoc不同，Java标注可以通过反射获取标注内容。在编译器生成类文件时，标注可以被嵌入到字节码中。Java虚拟机可以保留标注内容，在运行时可以获取到标注内容。当然它也支持自定义 Java 标注。  
+
+#### **【内置的注解】**
+　　- @Override - 检查该方法是否是重写方法。如果发现其父类，或者是引用的接口中并没有该方法时，会报编译错误。  
+　　- @Deprecated - 标记过时方法。如果使用该方法，会报编译警告。  
+　　- @SuppressWarnings - 指示编译器去忽略注解中声明的警告。  
+
+　　作用在其他注解的注解(或者说 元注解)是:  
+　　- @Retention - 标识这个注解怎么保存，是只在代码中，还是编入class文件中，或者是在运行时可以通过反射访问。  
+　　- @Documented - 标记这些注解是否包含在用户文档中。  
+　　- @Target - 标记这个注解应该是哪种 Java 成员。  
+　　- @Inherited - 标记这个注解是继承于哪个注解类(默认 注解并没有继承于任何子类)  
+　　- @SafeVarargs - Java 7 开始支持，忽略任何使用参数为泛型变量的方法或构造函数调用产生的警告。  
+　　- @FunctionalInterface - Java 8 开始支持，标识一个匿名函数或函数式接口。  
+　　- @Repeatable - Java 8 开始支持，标识某注解可以在同一个声明上使用多次。  
+
+#### **【Annotation 架构】**
+![hello](/ARTS-8/1.jpg)  
+　　1. Annotation 就是个接口。  
+　　2. ElementType 是 Enum 枚举类型，它用来指定 Annotation 的类型。例如Java语言中的类、方法、变量、参数和包等被标注。  
+```java
+package java.lang.annotation;
+public enum ElementType {
+    TYPE,               /* 类、接口（包括注释类型）或枚举声明  */
+    FIELD,              /* 字段声明（包括枚举常量）  */
+    METHOD,             /* 方法声明  */
+    PARAMETER,          /* 参数声明  */
+    CONSTRUCTOR,        /* 构造方法声明  */
+    LOCAL_VARIABLE,     /* 局部变量声明  */
+    ANNOTATION_TYPE,    /* 注释类型声明  */
+    PACKAGE             /* 包声明  */
+}
+```
+　　3. RetentionPolicy 是 Enum 枚举类型，它用来指定 Annotation 的策略。通俗点说，就是不同 RetentionPolicy 类型的 Annotation 的作用域不同。  
+```java
+package java.lang.annotation;
+public enum RetentionPolicy {
+    SOURCE,            /* Annotation信息仅存在于编译器处理期间，编译器处理完之后就没有该Annotation信息了  */
+    CLASS,             /* 编译器将Annotation存储于类对应的.class文件中。默认行为  */
+    RUNTIME            /* 编译器将Annotation存储于class文件中，并且可由JVM读入 */
+}
+```
+
+#### **【Annotation 的作用】**
+
+##### 　　1.编译检查
+　　Annotation 具有"让编译器进行编译检查的作用"。  
+　　例如，@SuppressWarnings, @Deprecated 和 @Override 都具有编译检查作用。  
+
+##### 　　2.在反射中使用 Annotation
+　　在反射的 Class, Method, Field 等函数中，有许多于 Annotation 相关的接口。  
+　　这也意味着，我们可以在反射中解析并使用 Annotation。  
+```java
+import java.lang.annotation.Annotation;
+import java.lang.annotation.Target;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Inherited;
+import java.lang.reflect.Method;
+
+/**
+ * Annotation在反射函数中的使用示例
+ */
+@Retention(RetentionPolicy.RUNTIME)
+@interface MyAnnotation {
+    String[] value() default "unknown";
+}
+
+/**
+ * Person类。它会使用MyAnnotation注解。
+ */
+class Person {
+   
+    /**
+     * empty()方法同时被 "@Deprecated" 和 "@MyAnnotation(value={"a","b"})"所标注
+     * (01) @Deprecated，意味着empty()方法，不再被建议使用
+     * (02) @MyAnnotation, 意味着empty() 方法对应的MyAnnotation的value值是默认值"unknown"
+     */
+    @MyAnnotation
+    @Deprecated
+    public void empty(){
+        System.out.println("\nempty");
+    }
+   
+    /**
+     * sombody() 被 @MyAnnotation(value={"girl","boy"}) 所标注，
+     * @MyAnnotation(value={"girl","boy"}), 意味着MyAnnotation的value值是{"girl","boy"}
+     */
+    @MyAnnotation(value={"girl","boy"})
+    public void somebody(String name, int age){
+        System.out.println("\nsomebody: "+name+", "+age);
+    }
+}
+
+public class AnnotationTest {
+
+    public static void main(String[] args) throws Exception {
+        // 新建Person
+        Person person = new Person();
+        // 获取Person的Class实例
+        Class<Person> c = Person.class;
+        // 获取 somebody() 方法的Method实例
+        Method mSomebody = c.getMethod("somebody", new Class[]{String.class, int.class});
+        // 执行该方法
+        mSomebody.invoke(person, new Object[]{"lily", 18});
+        iteratorAnnotations(mSomebody);
+
+        // 获取 somebody() 方法的Method实例
+        Method mEmpty = c.getMethod("empty", new Class[]{});
+        // 执行该方法
+        mEmpty.invoke(person, new Object[]{});        
+        iteratorAnnotations(mEmpty);
+    }
+   
+    public static void iteratorAnnotations(Method method) {
+        // 判断 somebody() 方法是否包含MyAnnotation注解
+        if(method.isAnnotationPresent(MyAnnotation.class)){
+            // 获取该方法的MyAnnotation注解实例
+            MyAnnotation myAnnotation = method.getAnnotation(MyAnnotation.class);
+            // 获取 myAnnotation的值，并打印出来
+            String[] values = myAnnotation.value();
+            for (String str:values)
+                System.out.printf(str+", ");
+            System.out.println();
+        }
+       
+        // 获取方法上的所有注解，并打印出来
+        Annotation[] annotations = method.getAnnotations();
+        for(Annotation annotation : annotations){
+            System.out.println(annotation);
+        }
+    }
+}
+// result:
+// somebody: lily, 18
+// girl, boy, 
+// @com.skywang.annotation.MyAnnotation(value=[girl, boy])
+
+// empty
+// unknown, 
+// @com.skywang.annotation.MyAnnotation(value=[unknown])
+// @java.lang.Deprecated()
+```
+
+##### 　　3.根据 Annotation 生成帮助文档
+　　通过给 Annotation 注解加上 @Documented 标签，能使该 Annotation 标签出现在 javadoc 中。  
+
+##### 　　4.能够帮忙查看查看代码
+　　通过 @Override, @Deprecated 等，我们能很方便的了解程序的大致结构。  
 
 ###  <font color=orange>Share：简析Boost库中的单例模式</font>
 　　首先非常遗憾的是Boost库中的没有专门的单例库，但是在其他库中有并不十分完善的实现。  
