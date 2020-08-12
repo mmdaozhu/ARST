@@ -95,7 +95,7 @@ synchronous | adj. 同步的；同时的
 ###  tips
 
 ###  <font color=yellow>Share: enable_shared_from_this 下的原型模式</font>
-　　首先先了解一下设计模式。  
+　　首先了解一下原型模式。  
 　　如果对象的创建成本比较大，而同一个类的不同对象之间差别不大（大部分字段都相同），在这种情况下，我们可以利用对已有对象（原型）进行复制（或者叫拷贝）的方式来创建新对象，以达到节省创建时间的目的。这种基于原型来创建对象的方式就叫作原型设计模式（Prototype Design Pattern），简称原型模式。  
 
 #### **【enable_shared_from_this库简介】**
