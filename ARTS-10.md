@@ -91,7 +91,17 @@ overtime | n. [劳经] 加班时间；延长时间；加时赛
 　　Sessions need to be stored in a centralized data store which is accessible to all your application servers. It can be an external database or an external persistent cache.  
 　　When database gets slower and slower, then denormalize right from the beginning and include no more Joins in any database query. You can switch to a better and easier to scale NoSQL database like MongoDB. Joins will now need to be done in your application code.  
 
-###  <font color=yellow>tips</font>
+###  <font color=yellow>tips：软件测试管理的四个阶段</font>
+　　第一阶段：构建模块功能确认 BBFV(Building Block Functional Validation)  
+　　第二阶段：系统设计验证 SDV(System Design Validation)  
+　　- SDV Entry  
+　　- SDV 100%  
+　　- SDV Exit  
+　　第三阶段：系统集成测试 SIT(System Integration Test)  
+　　- SIT Entry  
+　　- SIT 100%  
+　　- SIT Exit  
+　　第四阶段：系统验证测试 SVT(System Verification Test)  
 
 ###  <font color=yellow>Share: 实现一个multi_array库的Builder</font>
 　　首先先了解一下建造者模式。  

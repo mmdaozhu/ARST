@@ -80,6 +80,7 @@ public:
 #### **【Article】**
 https://github.com/donnemartin/system-design-primer  
 https://snarfed.org/transactions_across_datacenters_io.html  
+https://www.youtube.com/watch?v=srOgpXECblk  
 
 #### **【Comments and Conclusions】**
 　　- Weak consistency: After a write, reads may or may not see it. A best effort approach is taken.  
