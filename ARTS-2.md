@@ -58,24 +58,30 @@ public:
     所以结果为O(nlogn);
 */
 
+#include <assert.h>
+
+#include <iostream>
+#include <map>
+#include <vector>
+
 class Solution {
 public:
     int majorityElement(std::vector<int>& nums) {
-        std::map<int, int> m;
-        for (auto it : nums) {
-            if (m.find(it) != m.end()) {
-                m[it] += 1;
+        std::map<int, int> map;
+        for (const auto& num : nums) {
+            if (map.find(num) != map.end()) {
+                map[num] += 1;
             } else {
-                m[it] = 1;
+                map[num] = 1;
             }
         }
 
-        int count(0);
-        int result(0);
-        for (auto it : m) {
-            if (it.second > count) {
-                count = it.second;
-                result = it.first;
+        auto count = 0;
+        auto result = 0;
+        for (const auto& element : map) {
+            if (element.second > count) {
+                count = element.second;
+                result = element.first;
             }
         }
         return result;

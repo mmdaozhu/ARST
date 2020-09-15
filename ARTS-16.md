@@ -78,8 +78,6 @@ public:
 
 #### **【Article】**
 https://github.com/donnemartin/system-design-primer
-https://snarfed.org/transactions_across_datacenters_io.html
-https://www.youtube.com/watch?v=srOgpXECblk
 
 #### **【Words】**
 English | Chinese
