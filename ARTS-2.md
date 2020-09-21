@@ -28,66 +28,10 @@ Output: 2
 ```
 
 ##### 　　C++ Solution 1:
-```cpp
-/*
-解体思路：
-    先排序，然后找中间数，就是众数
-
-时间复杂度分析：
-    std::sort是改进后的快排，结果为O(nlogn)
-*/
-
-class Solution {
-public:
-    int majorityElement(std::vector<int>& nums) {
-        std::sort(nums.begin(),nums.end());
-        return nums[nums.size()/2];
-    }
-};
-```
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/169.MajorityElement/MajorityElement1.cpp
 
 ##### 　　C++ Solution 2:
-```cpp
-/*
-解体思路：
-    将数组的数和数的个数以{key,value}的形式存到map里面，然后搜索map，将value最大的key找到
-
-时间复杂度分析：
-    map的插入，删除，查找操作的理想状态下的时间复杂度为O(logn);
-    vector的遍历为O(n);
-    所以结果为O(nlogn);
-*/
-
-#include <assert.h>
-
-#include <iostream>
-#include <map>
-#include <vector>
-
-class Solution {
-public:
-    int majorityElement(std::vector<int>& nums) {
-        std::map<int, int> map;
-        for (const auto& num : nums) {
-            if (map.find(num) != map.end()) {
-                map[num] += 1;
-            } else {
-                map[num] = 1;
-            }
-        }
-
-        auto count = 0;
-        auto result = 0;
-        for (const auto& element : map) {
-            if (element.second > count) {
-                count = element.second;
-                result = element.first;
-            }
-        }
-        return result;
-    }
-};
-```
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/169.MajorityElement/MajorityElement2.cpp
 
 ###  <font color=red>Review</font>
 

@@ -8,7 +8,7 @@ tags:
 ---
 
 ### 什么是ARTS？
-![hello](/ARTS-1/1.jpg)
+![hello](1.jpg)
 　　来自耗子叔的建议：  
 　　完成一个 ARTS 的时间不要超过 5 个小时，尽题控制在 2-3 个小时以内，少了你投入不够，多了难以坚持。  
 　　这 2-3 个小时的时间分配是，算法题 30-60 分钟，英文文章 30 分钟，Tip 回想一下本周工作中学到的一个小技巧（10 分钟），Share思考一个技术观点、社会热点、一个产品或是一个困惑（这个时间应该放在日常），然后花 30-60 分钟写下来。  
@@ -35,58 +35,7 @@ A solution set is:
 ```
 
 ##### 　　C++ Solution:
-```cpp
-/*
-解体思路：
-    类比https://leetcode.com/problems/two-sum/ 的思路。
-    a+b+c=0,c=-a-b
-    在set里面找-a-b,如果存在，则找到。如果不存在，则将-a-b插入set中
-
-结果：leetcode报超时了，但是之前用go语言实现的类似版本没有超时。看样子c++版本还有优化的空间。
-时间复杂度分析：O(n*n)
-*/
-
-#include <assert.h>
-
-#include <algorithm>
-#include <iostream>
-#include <set>
-#include <vector>
-
-class Solution {
-public:
-    std::vector<std::vector<int>> threeSum(std::vector<int>& nums) {
-        std::vector<std::vector<int>> result;
-        if (nums.size() < 3) {
-            return result;
-        }
-        std::sort(nums.begin(), nums.end());
-        std::set<std::vector<int>> sv;
-        for (size_t i = 0; i < nums.size() - 2; i++) {
-            if (i > 0 && nums[i - 1] == nums[i]) {
-                continue;
-            }
-            std::set<int> si;
-            for (size_t j = i + 1; j < nums.size(); j++) {
-                if (si.find(-nums[i] - nums[j]) != si.end()) {
-                    std::vector<int> res;
-                    res.push_back(nums[i]);
-                    res.push_back(-nums[i] - nums[j]);
-                    res.push_back(nums[j]);
-                    sv.insert(res);
-                } else {
-                    si.insert(nums[j]);
-                }
-            }
-        }
-        std::set<std::vector<int>>::iterator it = sv.begin();
-        for (; it != sv.end(); it++) {
-            result.push_back(*it);
-        }
-        return result;
-    }
-};
-```
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/015.3Sum/3Sum.cpp
 
 ###  <font color=red>Review</font>
 
@@ -118,13 +67,14 @@ odd | n. 奇数；怪人；奇特的事物
 　　When designing any sort of web application it it important to consider these key principles, even if it is to acknowledge that a design may sacrifice one or more of them.  
 
 ###  <font color=red>tips：Linux命令：压缩和解压</font>
+
 #### **【zip】**
 　　.zip结尾的文件调用zip程序  
 　　压缩：  
 ```sh
 zip -r test.zip /home/test
 ```
-　　解压：
+　　解压：  
 ```sh
 unzip test.zip
 ```
