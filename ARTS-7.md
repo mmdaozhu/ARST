@@ -48,56 +48,7 @@ Explanation:
 ```
 
 ##### 　　C++ Solution:
-```cpp
-/*
-解体思路：
-    利用堆栈来求表达式
-
-时间复杂度分析：O(n)
-*/
-
-#include <assert.h>
-
-#include <iostream>
-#include <stack>
-#include <string>
-#include <vector>
-
-class Solution {
-public:
-    int evalRPN(std::vector<std::string>& tokens) {
-        std::stack<int> ss;
-        for (auto iter : tokens) {
-            if (isOperator(iter)) {
-                int b = ss.top();
-                ss.pop();
-                int a = ss.top();
-                ss.pop();
-                if (iter == "+") {
-                    ss.push(a + b);
-                } else if (iter == "-") {
-                    ss.push(a - b);
-                } else if (iter == "*") {
-                    ss.push(a * b);
-                } else {
-                    ss.push(a / b);
-                }
-            } else {
-                ss.push(stoi(iter));
-            }
-        }
-        return ss.top();
-    }
-
-    bool isOperator(const std::string& op) {
-        if (op == "+" || op == "-" || op == "*" || op == "/") {
-            return true;
-        } else {
-            return false;
-        }
-    }
-};
-```
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/150.EvaluateReversePolishNotation/EvaluateReversePolishNotation.cpp
 
 ###  <font color=orange>Review</font>
 
