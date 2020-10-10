@@ -40,89 +40,10 @@ Explanation: There is no cycle in the linked list.
 ![hello](/ARTS-4/3.png)
 
 ##### 　　C++ Solution 1:
-```cpp
-/*
-解体思路：
-   将链表每个结点的指针依次在set里面找下，如果存在返回true，不存在就把放到set里面。
-
-时间复杂度分析：O(logn)
-*/
-
-#include <assert.h>
-
-#include <iostream>
-#include <set>
-
-/**
- * Definition for singly-linked list.
- *
- */
-struct ListNode {
-    int val;
-    ListNode* next;
-    ListNode(int x) : val(x), next(nullptr) {}
-};
-
-class Solution {
-public:
-    bool hasCycle(ListNode* head) {
-        std::set<ListNode*> s;
-        ListNode* p = head;
-        while (p != nullptr) {
-            if (s.find(p) != s.end()) {
-                return true;
-            } else {
-                s.insert(p);
-            }
-            p = p->next;
-        }
-        return false;
-    }
-};
-
-```
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/141.LinkedListCycle/LinkedListCycle1.cpp
 
 ##### 　　C++ Solution 2:
-```cpp
-/*
-解体思路：
-    使用快慢指针
-
-时间复杂度分析：O(logn)
-*/
-
-#include <assert.h>
-
-#include <iostream>
-
-/**
- * Definition for singly-linked list.
- *
- */
-
-struct ListNode {
-    int val;
-    ListNode* next;
-    ListNode(int x) : val(x), next(nullptr) {}
-};
-
-class Solution {
-public:
-    bool hasCycle(ListNode* head) {
-        ListNode* slow = head;
-        ListNode* fast = head;
-        while (fast != nullptr && fast->next != nullptr) {
-            slow = slow->next;
-            fast = fast->next->next;
-            if (slow == fast) {
-                return true;
-            }
-        }
-        return false;
-    }
-};
-
-```
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/141.LinkedListCycle/LinkedListCycle2.cpp
 
 ###  <font color=red>Review</font>
 
