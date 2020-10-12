@@ -35,35 +35,7 @@ Explanation: There are three ways to climb to the top.
 ```
 
 ##### 　　C++ Solution:
-```cpp
-#include <assert.h>
-#include <iostream>
-
-/*
-解体思路：
-    f(n) = f(n-1) + f(n-2)
-    f(3) = f(2) + f(1)
-    f(2) = 2
-    f(1) = 1
-    转换成斐波那契数列求和问题。
-
-时间复杂度分析：O(n)
-*/
-
-class Solution {
-public:
-    int climbStairs(int n) {
-        int first(0);
-        int second(1);
-        for (int i = 0; i < n; i++) {
-            int sum = first + second;
-            std::swap(first, second);
-            std::swap(second, sum);
-        }
-        return second;
-    }
-};
-```
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/070.ClimbingStairs/ClimbingStairs.cpp
 
 ###  <font color=yellow>Review</font>
 

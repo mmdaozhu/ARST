@@ -29,28 +29,7 @@ Output: ["h","a","n","n","a","H"]
 ```
 
 ##### 　　C++ Solution:
-```cpp
-#include <assert.h>
-
-#include <iostream>
-#include <vector>
-
-/*
-解体思路：
-    因为vector是顺序存储的，做reverse直接用索引替换就好了。
-
-时间复杂度分析：O(n)
-*/
-
-class Solution {
-public:
-    void reverseString(std::vector<char>& s) {
-        for (size_t i = 0; i < s.size() / 2; i++) {
-            std::swap(s[i], s[s.size() - i - 1]);
-        }
-    }
-};
-```
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/344.ReverseString/ReverseString.cpp
 
 ###  <font color=yellow>Review</font>
 
@@ -58,7 +37,6 @@ public:
 https://github.com/donnemartin/system-design-primer  
 https://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html  
 https://www.slideshare.net/jboner/scalability-availability-stability-patterns/  
-
 
 #### **【Words】**
 English | Chinese
@@ -73,7 +51,28 @@ incantation | n. 咒语
 　　If you have a performance problem, your system is slow for a single user.  
 　　If you have a scalability problem, your system is fast for a single user but slow under heavy load.  
 
-###  tips
+###  <font color=yellow>tips：覃超：算法通关秘籍</font>
+https://www.bilibili.com/video/BV1sE411q7Kd?p=1
+　　五步刷题法（五毒神掌）
+　　刷题第一遍
+　　　　- 5分钟：读题+思考
+　　　　- 直接看解法：注意！多解法，比较解法优劣
+　　　　- 背诵、默写好的解法
+　　　　- 记住：不要纠结，不需要抢救
+
+　　刷题第二遍
+　　　　- 自己马上写，LeetCode提交
+　　　　- 多种解法比较，体会 -> 优化
+
+　　刷题第三遍
+　　　　- 过了一天后，再重复做题
+　　　　- 不同解法的熟练程度 -> 专项练习
+
+　　刷题第四遍
+　　　　- 过了一周：反复回来练习相同题目
+
+　　刷题第五遍
+　　　　- 面试前一周恢复性训练
 
 ###  <font color=yellow>Share: smart_ptr 下的代理模式</font>
 　　首先了解一下代理模式。  

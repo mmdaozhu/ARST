@@ -31,43 +31,7 @@ Explanation: The square root of 8 is 2.82842..., and since
 ```
 
 ##### 　　C++ Solution:
-```cpp
-#include <assert.h>
-
-#include <iostream>
-
-/*
-解体思路：
-    采用二分查找算法，类似于二分查找的变体：查找最后一个小于等于给定值的元素。
-
-时间复杂度分析：O(logn)
-*/
-
-class Solution {
-public:
-    int mySqrt(int x) {
-        if (x == 0 || x == 1) {
-            return x;
-        }
-
-        int low(0);
-        int high(x);
-        while (low <= high) {
-            int mid = low + ((high - low) >> 1);
-            if (x / mid < mid) {
-                high = mid - 1;
-            } else {
-                if (x / mid >= mid && x / (mid + 1) < (mid + 1)) {
-                    return mid;
-                } else {
-                    low = mid + 1;
-                }
-            }
-        }
-        return -1;
-    }
-};
-```
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/069.Sqrt(x)/Sqrt(x).cpp
 
 ###  <font color=yellow>Review</font>
 
@@ -92,7 +56,21 @@ synchronous | adj. 同步的；同时的
 　　The first one is to do the time-consuming work in advance and serving the finished work with a low request time.  
 　　The second one is to handle tasks asynchronously. The frontend of your website sends a job is in work, please continue to browse the page. The job queue is constantly checked by a bunch of workers for new jobs. If there is a new job then the worker does the job and after some minutes sends a signal that the job was done.  
 
-###  tips
+###  <font color=yellow>tips：左耳朵耗子的经验分享</font>
+https://www.bilibili.com/video/BV1ct411i7uc
+　　在路透公司的线上bug，fix bug的code没发布出去。
+　　撑着年轻，多犯错误，对问题才会有深刻的理解。
+　　不断学习不断总结。不要畏手畏脚，大胆做。
+https://www.bilibili.com/video/BV1Ft411i7qq
+　　欣赏37Signals公司，小团队大产出。
+　　条件受限，才会关注自己做的东西。
+　　条件受限，才会逼着自己和别人合作。
+　　条件受限，才会逼着自己自动化。
+
+　　所有的创新都与自动化有关。
+
+https://www.bilibili.com/video/BV1Ft411i7i8
+　　辞职（所有人都反对）。
 
 ###  <font color=yellow>Share: enable_shared_from_this 下的原型模式</font>
 　　首先了解一下原型模式。  
