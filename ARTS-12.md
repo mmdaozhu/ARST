@@ -52,27 +52,27 @@ incantation | n. 咒语
 　　If you have a scalability problem, your system is fast for a single user but slow under heavy load.  
 
 ###  <font color=yellow>tips：覃超：算法通关秘籍</font>
-https://www.bilibili.com/video/BV1sE411q7Kd?p=1
-　　五步刷题法（五毒神掌）
-　　刷题第一遍
-　　　　- 5分钟：读题+思考
-　　　　- 直接看解法：注意！多解法，比较解法优劣
-　　　　- 背诵、默写好的解法
-　　　　- 记住：不要纠结，不需要抢救
+https://www.bilibili.com/video/BV1sE411q7Kd?p=1  
+　　五步刷题法（五毒神掌）  
+　　刷题第一遍  
+　　　　- 5分钟：读题+思考  
+　　　　- 直接看解法：注意！多解法，比较解法优劣  
+　　　　- 背诵、默写好的解法  
+　　　　- 记住：不要纠结，不需要抢救  
 
-　　刷题第二遍
-　　　　- 自己马上写，LeetCode提交
-　　　　- 多种解法比较，体会 -> 优化
+　　刷题第二遍  
+　　　　- 自己马上写，LeetCode提交  
+　　　　- 多种解法比较，体会 -> 优化  
 
-　　刷题第三遍
-　　　　- 过了一天后，再重复做题
-　　　　- 不同解法的熟练程度 -> 专项练习
+　　刷题第三遍  
+　　　　- 过了一天后，再重复做题  
+　　　　- 不同解法的熟练程度 -> 专项练习  
 
-　　刷题第四遍
-　　　　- 过了一周：反复回来练习相同题目
+　　刷题第四遍  
+　　　　- 过了一周：反复回来练习相同题目  
 
-　　刷题第五遍
-　　　　- 面试前一周恢复性训练
+　　刷题第五遍  
+　　　　- 面试前一周恢复性训练  
 
 ###  <font color=yellow>Share: smart_ptr 下的代理模式</font>
 　　首先了解一下代理模式。  
