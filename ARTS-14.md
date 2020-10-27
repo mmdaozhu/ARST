@@ -20,98 +20,40 @@ tags:
 
 ##### 　　Example 1:
 ```sh
-Input: "42"
+Input: str = "42"
 Output: 42
 ```
 
 ##### 　　Example 2:
 ```sh
-Input: "   -42"
+Input: str = "   -42"
 Output: -42
-Explanation: The first non-whitespace character is '-', which is the minus sign.
-             Then take as many numerical digits as possible, which gets 42.
+Explanation: The first non-whitespace character is '-', which is the minus sign. Then take as many numerical digits as possible, which gets 42.
 ```
 
 ##### 　　Example 3:
 ```sh
-Input: "4193 with words"
+Input: str = "4193 with words"
 Output: 4193
 Explanation: Conversion stops at digit '3' as the next character is not a numerical digit.
 ```
 
 ##### 　　Example 4:
 ```sh
-Input: "words and 987"
+Input: str = "words and 987"
 Output: 0
-Explanation: The first non-whitespace character is 'w', which is not a numerical 
-             digit or a +/- sign. Therefore no valid conversion could be performed.
+Explanation: The first non-whitespace character is 'w', which is not a numerical digit or a +/- sign. Therefore no valid conversion could be performed.
 ```
 
 ##### 　　Example 5:
 ```sh
-Input: "-91283472332"
+Input: str = "-91283472332"
 Output: -2147483648
-Explanation: The number "-91283472332" is out of the range of a 32-bit signed integer.
-             Thefore INT_MIN (−231) is returned.
+Explanation: The number "-91283472332" is out of the range of a 32-bit signed integer. Thefore INT_MIN (−231) is returned.
 ```
 
 ##### 　　C++ Solution:
-```cpp
-#include <assert.h>
-
-#include <iostream>
-#include <limits>
-#include <string>
-
-/*
-时间复杂度分析：O(n)
-*/
-
-class Solution {
-public:
-    int myAtoi(std::string str) {
-        int result(0);
-        size_t pos(-1);
-        for (size_t i = 0; i < str.size(); i++) {
-            if (!isspace(str[i])) {
-                pos = i;
-                break;
-            }
-        }
-        if (pos == -1) {
-            return result;
-        }
-
-        bool plus(true);
-        if (str[pos] == '+' || str[pos] == '-') {
-            plus = (str[pos] != '-');
-            pos++;
-        }
-
-        for (; pos < str.size(); pos++) {
-            if (isdigit(str[pos])) {
-                int digit = str[pos] - '0';
-                if (plus) {
-                    if (result > (std::numeric_limits<int>::max() - digit) / 10) {
-                        return std::numeric_limits<int>::max();
-                    }
-                    result = 10 * result + digit;
-
-                } else {
-                    if (result < (std::numeric_limits<int>::min() + digit) / 10) {
-                        return std::numeric_limits<int>::min();
-                    }
-                    result = 10 * result - digit;
-                }
-            } else {
-                break;
-            }
-        }
-
-        return result;
-    }
-};
-```
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/008.StringToInteger(atoi)/StringToInteger(atoi).cpp
 
 ###  <font color=green>Review</font>
 
@@ -136,7 +78,45 @@ incur | v. 招致，遭受；引致，带来
 　　- AP: availability and partition tolerance Responses return the most readily available version of the data available on any node, which might not be the latest. Writes might take some time to propagate when the partition is resolved.  
 　　The decision between Consistency and Availability is a software trade off.  
 
-###  tips
+###  <font color=green>tips: TDengine 的超强性能是如何实现的？</font>
+https://www.bilibili.com/video/BV1dE411e7Vf
+
+#### **【物联网、工业4.0数据特征：时序空间数据】**
+　　1.所有采集的数据都是时序的  
+　　2.数据都是结构化的  
+　　3.一个采集点的数据源是唯一的  
+　　4.数据很少有更新或删除操作  
+　　5.数据一般是按到期日期来删除的  
+　　6.数据以写操作为主，读操作为辅  
+　　7.数据流量平稳、可以较为准确的计算  
+　　8.数据都有统计、聚合等实时计算操作  
+　　9.数据一定是指定时间段和指定区域查找的  
+　　10.数据量巨大，一天的数据量就超过100亿条  
+
+#### **【TDengine 应运而生】**
+　　https://github.com/taosdata/TDengine  
+
+#### **【TDengine 提供的主要功能】**
+　　1.实时数据库，历史数据库，操作合一透明  
+　　2.流式计算，对一个或多个数据流实时聚合计算  
+　　3.缓存，所有设备最新记录实时返回  
+　　4.数据订阅，最新的数据可实时推送到应用  
+
+#### **【TDengine 的产品竞争力】**
+　　1.10倍以上的性能提升  
+　　2.成本大幅下降  
+　　3.零学习成本  
+
+#### **【TDengine 应用领域】**
+　　物联网  
+
+#### **【TDengine 的技术介绍】**
+　　架构借鉴cassandra，HBase，Redis  
+　　数据模型：一台设备一张表  
+　　采取列式存储，便于压缩；不通数据采用不通压缩算法  
+　　超级表：多个采集点的数据聚合  
+　　实时Stream计算  
+　　零管理：最大程度的减少运维工作  
 
 ###  <font color=green>Share: boost.operators库下的基类链</font>
 

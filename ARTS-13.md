@@ -9,90 +9,54 @@ tags:
 
 ###  <font color=green>Algorithm</font>
 
-#### **【LeetCode:32. Longest Valid Parentheses】**
+#### **【LeetCode:151. Reverse Words in a String】**
 
 ##### 　　Description:
-　　Given an input string, reverse the string word by word.  
+　　Given an input string s, reverse the order of the words.  
+　　A word is defined as a sequence of non-space characters. The words in s will be separated by at least one space.  
+　　Return a string of the words in reverse order concatenated by a single space.  
+
+　　Note that s may contain leading or trailing spaces or multiple spaces between two words. The returned string should only have a single space separating the words. Do not include any extra spaces.  
 
 ##### 　　Example 1:
 ```sh
-Input: "the sky is blue"
+Input: s = "the sky is blue"
 Output: "blue is sky the"
 ```
 
 ##### 　　Example 2:
 ```sh
-Input: "  hello world!  "
-Output: "world! hello"
+Input: s = "  hello world  "
+Output: "world hello"
 Explanation: Your reversed string should not contain leading or trailing spaces.
 ```
 
 ##### 　　Example 3:
 ```sh
-Input: "a good   example"
+Input: s = "a good   example"
 Output: "example good a"
 Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
 ```
 
-##### 　　Note
-　　A word is defined as a sequence of non-space characters.  
-　　Input string may contain leading or trailing spaces. However, your reversed string should not contain leading or trailing spaces.  
-　　You need to reduce multiple spaces between two words to a single space in the reversed string.  
+##### 　　Example 4:
+```sh
+Input: s = "  Bob    Loves  Alice   "
+Output: "Alice Loves Bob"
+```
+
+##### 　　Example 5:
+```sh
+Input: s = "Alice does not even like bob"
+Output: "bob like even not does Alice"
+```
+
+##### 　　Constraints
+　　- 1 <= s.length <= 104  
+　　- s contains English letters (upper-case and lower-case), digits, and spaces ' '.  
+　　- There is at least one word in s.  
 
 ##### 　　C++ Solution:
-```cpp
-#include <assert.h>
-
-#include <iostream>
-#include <string>
-
-/*
-解体思路：
-     ****the*sky**is*blue**
-     1.**eulb*si**yks*eht**** (swap)
-     2.**eulb*si**yks*eht**** (swap,[0,6))
-     3.blue***si**yks*eht**** (swap,[5,9))
-     4.blue*is****yks*eht**** (swap,[8,14))
-     5.blue*is*sky****eht**** (swap,[12,18))
-     6.blue*is*sky*the******* (remove *)
-     7.blue*is*sky*the
-
-时间复杂度分析：O(n)
-*/
-
-class Solution {
-public:
-    std::string reverseWords(std::string s) {
-        for (size_t i = 0; i < s.size() / 2; i++) {
-            std::swap(s[i], s[s.size() - i - 1]);
-        }
-        int start(0);
-        int end(-2);
-        bool inWord(false);
-        for (size_t i = 0; i <= s.size(); i++) {
-            if (i != s.size() && s[i] != ' ') {
-                inWord = true;
-            }
-            if (inWord && (i == s.size() || s[i] == ' ')) {
-                inWord = false;
-                start = end;
-                while (start > 0 && s[start] == ' ') {
-                    start--;
-                }
-                start += 2;
-                end = i;
-                for (int k = 0; k < (end - start) / 2; k++) {
-                    std::swap(s[k + start], s[end - k - 1]);
-                }
-            }
-        }
-        while (!s.empty() && s.back() == ' ') {
-            s.pop_back();
-        }
-        return s;
-    }
-};
-```
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/151.ReverseWordsInAString/ReverseWordsInAString.cpp
 
 ###  <font color=green>Review</font>
 
@@ -106,12 +70,23 @@ English | Chinese
 -|-
 versus | prep. 对，对抗；与……相对，与……相比
 
-
 #### **【Comments and Conclusions】**
 　　Latency is the time required to perform some action or to produce some result.  
 　　Throughput is the number of such actions executed or results produced per unit of time.  
 
-###  tips
+###  <font color=green>tips: 秒懂Nginx的三大应用场景</font>
+https://www.bilibili.com/video/BV1db411F74p  
+
+#### **【反向代理服务】**
+　　- 强大性能  
+　　- 缓存  
+　　- 负载均衡  
+
+#### **【静态资源服务】**
+　　- 通过本地文件系统提供服务  
+
+#### **【API服务】**
+　　- OpenResty  
 
 ###  <font color=green>Share: boost库下的桥接模式</font>
 　　首先了解一下桥接模式。  
