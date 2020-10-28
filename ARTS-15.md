@@ -32,48 +32,7 @@ return its depth = 3.
 　　A leaf is a node with no children.  
 
 ##### 　　C++ Solution:
-```cpp
-#include <cassert>
-#include <iostream>
-
-/*
-解体思路：
-    递归
-
-时间复杂度分析：O(n)
-*/
-
-/**
- * Definition for a binary tree node.
- *
- */
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
-};
-
-class Solution {
-public:
-    int maxDepth(TreeNode *root) {
-        if (root == nullptr) {
-            return 0;
-        }
-
-        //reduce recursion times.
-        if (root->left == nullptr && root->right == nullptr) {
-            return 1;
-        }
-
-        int left = maxDepth(root->left);
-        int right = maxDepth(root->right);
-        return left > right ? left + 1 : right + 1;
-    }
-};
-```
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/104.MaximumDepthOfBinaryTree/MaximumDepthOfBinaryTree.cpp  
 
 ###  <font color=green>Review</font>
 
@@ -92,7 +51,50 @@ https://www.youtube.com/watch?v=srOgpXECblk
 　　- Strong consistency: After a write, reads will see it. Data is replicated synchronously.  
 　　App Engine: datastore such as file systems, RDBMSec.  
 
-###  tips
+###  <font color=green>tips: 算法通关秘籍——动态规划篇</font>
+https://www.bilibili.com/video/BV1FE411e7NY  
+
+#### **【如何鉴别一个问题是否可以用动态规划来解决?】**
+　　“一个模型三个特征”理论:  
+　　这个模型定义为“<b>多阶段决策最优解模型</b>  
+　　“<b>三个特征</b>”？它们分别是<b>最优子结构、无后效性和重复子问题</b>  
+
+#### **【动态规划解决问题的思路】**
+
+##### 1. 状态转移表法
+　　我们先画出一个状态表。状态表一般都是二维的，所以你可以把它想象成二维数组。其中，每个状态包含三个变量，行、列、数组值。我们根据决策的先后过程，从前往后，根据递推关系，分阶段填充状态表中的每个状态。最后，我们将这个递推填表的过程，翻译成代码，就是动态规划代码了。  
+
+##### 2. 状态转移方程法
+　　状态转移方程法有点类似递归的解题思路。我们需要分析，某个问题如何通过子问题来递归求解，也就是所谓的最优子结构。根据最优子结构，写出递归公式，也就是所谓的状态转移方程。有了状态转移方程，代码实现就非常简单了。一般情况下，我们有两种代码实现方法，一种是<b>递归加“备忘录”</b>，另一种是<b>迭代递推</b>。  
+
+#### **【凑硬币】**
+　　问题： 有1元、3元、5元面值的硬币若干，要凑到11元需要最少几个硬币？  
+
+　　状态转移方程： n[m] = min{ 1+n[m-1], 1+n[m-3], 1+n[m-5] }  
+
+#### **【切刚条】**
+　　问题：有一段长长的刚条可以切断成若干节来卖，长度为0-10的刚条单独卖的价格为：p = [0,1,5,8,9,10,17,17,20,24,30]。 问长度为n的刚条，最好的切割方法是什么？  
+
+　　状态转移方程：F[n] = p[m] + F[n-m]  
+```c
+F[0] = p[0] = 0
+
+F[1] = p[1] = 1
+
+F[2] = max{p[2], p[1]+F[1]} = 5
+
+F[3] = max{p[3], p[2]+F[1], p[1]+F[2]} = 8
+
+....
+```
+
+#### **【LCS】**
+　　问题：最长公共子序列问题：有X，Y两个序列，求最长的公共子序列的长度。  
+　　举例：X: ABCBDAB，Y: BDCABA。最长的子序列为长度为4，有好几条，比如：BDAB，BCAB。  
+
+　　思路：  
+　　当X[i] = Y[j]，LCS(X[:i], Y[:j]) = 1 + LCS( X[:i-1], Y[:j-1])  
+　　当X[i] != Y[j]，LCS(X[:i], Y[:j]) = max{LCS(X[:i], Y[:j-1]), LCS(X[:i-1], Y[:j])}  
 
 ###  <font color=green>Share: boost.array库下的适配器模式</font>
 　　首先了解一下适配器模式。  
