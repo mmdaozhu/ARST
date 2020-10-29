@@ -37,47 +37,12 @@ Output:
 　　Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so f*** off.  
 
 ##### 　　C++ Solution:
-```cpp
-#include <iostream>
-
-/*
-解体思路：
-    递归
-
-时间复杂度分析：O(n)
-*/
-
-/**
- * Definition for a binary tree node.
- *
- */
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
-};
-
-class Solution {
-public:
-    TreeNode *invertTree(TreeNode *root) {
-        if (root == nullptr) {
-            return root;
-        }
-        std::swap(root->left, root->right);
-        invertTree(root->left);
-        invertTree(root->right);
-        return root;
-    }
-};
-```
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/226.InvertBinaryTree/InvertBinaryTree.cpp  
 
 ###  <font color=green>Review</font>
 
 #### **【Article】**
-https://github.com/donnemartin/system-design-primer
+https://github.com/donnemartin/system-design-primer  
 
 #### **【Words】**
 English | Chinese
@@ -98,7 +63,16 @@ fail-over | n. 故障切换
 　　Fail-over adds more hardware and additional complexity.  
 　　There is a potential for loss of data if the active system fails before any newly written data can be replicated to the passive.  
 　
-###  tips
+###  <font color=green>tips: 揭秘阿里云创始人王坚的人生经历</font>
+https://www.bilibili.com/video/BV1KJ411D7mv  
+
+　　技术人员不仅仅要用技术，更要创造技术。  
+
+　　这个时代是历史上少数的好时代，要把握好时代。  
+
+　　2050大会：让世界各地的年青人因科技而团聚，2050因此成了这群人的公益事业。  
+
+　　城市大脑：一个全新的城市基础设施，不仅仅拥有交通治理，期望解决今天仅靠人脑无法解决的城市发展问题。  
 
 ###  <font color=green>Share: boost.Signals2库下的观察者模式</font>
 　　观察者模式：在对象之间定义一个一对多的依赖，当一个对象状态改变的时候，所有依赖的对象都会自动收到通知。  
