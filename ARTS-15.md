@@ -32,7 +32,7 @@ return its depth = 3.
 　　A leaf is a node with no children.  
 
 ##### 　　C++ Solution:
-https://github.com/mmdaozhu/leetcode/blob/master/cpp/104.MaximumDepthOfBinaryTree/MaximumDepthOfBinaryTree.cpp  
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/104.MaximumDepthOfBinaryTree/MaximumDepthOfBinaryTree.cpp
 
 ###  <font color=green>Review</font>
 

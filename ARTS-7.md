@@ -53,7 +53,8 @@ https://github.com/mmdaozhu/leetcode/blob/master/cpp/150.EvaluateReversePolishNo
 ###  <font color=orange>Review</font>
 
 #### **【Article】**
-https://github.com/donnemartin/system-design-primer (https://www.youtube.com/watch?v=-W9F__D3oY4)
+https://github.com/donnemartin/system-design-primer  
+https://www.youtube.com/watch?v=-W9F__D3oY4  
 
 #### **【Words】**
 

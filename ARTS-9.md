@@ -47,7 +47,8 @@ https://github.com/mmdaozhu/leetcode/blob/master/cpp/239.SlidingWindowMaximum/Sl
 ###  <font color=yellow>Review</font>
 
 #### **【Article】**
-https://github.com/donnemartin/system-design-primer (https://www.youtube.com/watch?v=-W9F__D3oY4)
+https://github.com/donnemartin/system-design-primer  
+https://www.youtube.com/watch?v=-W9F__D3oY4  
 
 #### **【Comments and Conclusions】**
 
