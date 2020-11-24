@@ -57,21 +57,15 @@ synchronous | adj. 同步的；同时的
 　　The second one is to handle tasks asynchronously. The frontend of your website sends a job is in work, please continue to browse the page. The job queue is constantly checked by a bunch of workers for new jobs. If there is a new job then the worker does the job and after some minutes sends a signal that the job was done.  
 
 ###  <font color=yellow>tips：左耳朵耗子的经验分享</font>
-https://www.bilibili.com/video/BV1ct411i7uc  
-　　在路透公司的线上bug，fix bug的code没发布出去。  
-　　撑着年轻，多犯错误，对问题才会有深刻的理解。  
-　　不断学习不断总结。不要畏手畏脚，大胆做。  
+https://www.bilibili.com/video/BV1cE411J7HD  
 
-https://www.bilibili.com/video/BV1Ft411i7qq  
-　　欣赏37Signals公司，小团队大产出。  
-　　条件受限，才会关注自己做的东西。  
-　　条件受限，才会逼着自己和别人合作。  
-　　条件受限，才会逼着自己自动化。  
-
-　　所有的创新都与自动化有关。  
-
-https://www.bilibili.com/video/BV1Ft411i7i8  
-　　辞职（所有人都反对）。  
+　　- 撑着年轻，多犯错误，对问题才会有深刻的理解。  
+　　- 不断学习不断总结。不要畏手畏脚，大胆做。  
+　　- 欣赏37Signals公司，小团队大产出。  
+　　- 条件受限，才会关注自己做的东西。  
+　　- 条件受限，才会逼着自己和别人合作。  
+　　- 条件受限，才会逼着自己自动化。  
+　　- 所有的创新都与自动化有关。  
 
 ###  <font color=yellow>Share: enable_shared_from_this 下的原型模式</font>
 　　首先了解一下原型模式。  
