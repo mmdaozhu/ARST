@@ -24,3 +24,4 @@
 * [ARTS-22](https://github.com/mmdaozhu/ARST/blob/master/ARTS-22.md)
 * [ARTS-23](https://github.com/mmdaozhu/ARST/blob/master/ARTS-23.md)
 * [ARTS-24](https://github.com/mmdaozhu/ARST/blob/master/ARTS-24.md)
+* [ARTS-25](https://github.com/mmdaozhu/ARST/blob/master/ARTS-25.md)
