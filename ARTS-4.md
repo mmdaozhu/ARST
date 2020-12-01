@@ -12,38 +12,41 @@ tags:
 #### **【LeetCode:141. Linked List Cycle】**
 
 ##### 　　Description:
-　　Given a linked list, determine if it has a cycle in it.  
-　　To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail connects to. If pos is -1, then there is no cycle in the linked list.  
+　　Given head, the head of a linked list, determine if the linked list has a cycle in it.  
+
+　　There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.  
+
+　　Return true if there is a cycle in the linked list. Otherwise, return false.  
 
 ##### 　　Example 1:
+![hello](/ARTS-4/1.png)
 ```sh
 Input: head = [3,2,0,-4], pos = 1
 Output: true
 Explanation: There is a cycle in the linked list, where tail connects to the second node.
 ```
-![hello](/ARTS-4/1.png)
 
 ##### 　　Example 2:
+![hello](/ARTS-4/2.png)
 ```sh
 Input: head = [1,2], pos = 0
 Output: true
 Explanation: There is a cycle in the linked list, where tail connects to the first node.
 ```
-![hello](/ARTS-4/2.png)
 
 ##### 　　Example 3:
+![hello](/ARTS-4/3.png)
 ```sh
 Input: head = [1], pos = -1
 Output: false
 Explanation: There is no cycle in the linked list.
 ```
-![hello](/ARTS-4/3.png)
 
 ##### 　　C++ Solution 1:
-https://github.com/mmdaozhu/leetcode/blob/master/cpp/141.LinkedListCycle/LinkedListCycle1.cpp
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/141.LinkedListCycle/LinkedListCycle1.cpp  
 
 ##### 　　C++ Solution 2:
-https://github.com/mmdaozhu/leetcode/blob/master/cpp/141.LinkedListCycle/LinkedListCycle2.cpp
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/141.LinkedListCycle/LinkedListCycle2.cpp  
 
 ###  <font color=red>Review</font>
 
