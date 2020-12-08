@@ -10,6 +10,8 @@ tags:
 ###  <font color=blue>Algorithm</font>
 
 #### **【LeetCode:98. Validate Binary Search Tree】**
+
+##### 　　Description:
 　　Given a binary tree, determine if it is a valid binary search tree (BST).  
 　　Assume a BST is defined as follows:  
 　　- The left subtree of a node contains only nodes with keys less than the node's key.  
@@ -39,8 +41,11 @@ Output: false
 Explanation: The root node's value is 5 but its right child's value is 4.
 ```
 
-##### 　　C++ Solution:
-https://github.com/mmdaozhu/leetcode/blob/master/cpp/098.ValidateBinarySearchTree/ValidateBinarySearchTree.cpp  
+##### 　　C++ Solution 1:
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/098.ValidateBinarySearchTree/ValidateBinarySearchTree1.cpp  
+
+##### 　　C++ Solution 2:
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/098.ValidateBinarySearchTree/ValidateBinarySearchTree2.cpp  
 
 ###  <font color=blue>Review</font>
 

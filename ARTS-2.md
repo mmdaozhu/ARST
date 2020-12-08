@@ -28,10 +28,13 @@ Output: 2
 ```
 
 ##### 　　C++ Solution 1:
-https://github.com/mmdaozhu/leetcode/blob/master/cpp/169.MajorityElement/MajorityElement1.cpp
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/169.MajorityElement/MajorityElement1.cpp  
 
 ##### 　　C++ Solution 2:
-https://github.com/mmdaozhu/leetcode/blob/master/cpp/169.MajorityElement/MajorityElement2.cpp
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/169.MajorityElement/MajorityElement2.cpp  
+
+##### 　　C++ Solution 3:
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/169.MajorityElement/MajorityElement3.cpp  
 
 ###  <font color=red>Review</font>
 
