@@ -177,7 +177,7 @@ https://www.bilibili.com/video/BV1i7411L7Uj
 ##### 个人的技术体系建设总图
 ![hello](/ARTS-26/11.jpg)
 
-###  <font color=purple>Share: 深入剖析单例模式（一）</font>
+###  <font color=purple>Share: 浅谈单例模式（一）</font>
 
 #### **【什么是单例模式？】**
 　　《设计模式》一书中是这样定义的：保证一个类仅有一个实例，并提供一个访问它的全局访问点。  

@@ -106,7 +106,7 @@ https://www.bilibili.com/video/BV1j7411i7mR
 　　5. 要有时间意识  
 　　6. 先用最简单的方法解决  
 
-###  <font color=purple>Share: 深入剖析单例模式（二）</font>
+###  <font color=purple>Share: 浅谈单例模式（二）</font>
 　　在上一节中我讲解了什么是单例模式，单例模式的应用场景以及一个简单的实现。  
 
 　　在这一节中我们继续来看单例模式的另外几种实现方式。  

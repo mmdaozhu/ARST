@@ -12,27 +12,43 @@ tags:
 #### **【LeetCode:104. Maximum Depth of Binary Tree】**
 
 ##### 　　Description:
-　　Given a binary tree, find its maximum depth.  
-　　The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.  
+　　Given the root of a binary tree, return its maximum depth.  
+
+　　A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.  
 
 ##### 　　Example 1:
+![hello](/ARTS-15/1.jpg)
 ```sh
-Given binary tree [3,9,20,null,null,15,7],
-
-    3
-   / \
-  9  20
-    /  \
-   15   7
-
-return its depth = 3.
+Input: root = [3,9,20,null,null,15,7]
+Output: 3
 ```
 
-##### 　　Note:
-　　A leaf is a node with no children.  
+##### 　　Example 2:
+```sh
+Input: root = [1,null,2]
+Output: 2
+```
 
-##### 　　C++ Solution:
-https://github.com/mmdaozhu/leetcode/blob/master/cpp/104.MaximumDepthOfBinaryTree/MaximumDepthOfBinaryTree.cpp
+##### 　　Example 3:
+```sh
+Input: root = []
+Output: 0
+```
+
+##### 　　Example 4:
+```sh
+Input: root = [0]
+Output: 1
+```
+
+##### 　　C++ Solution 1:
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/104.MaximumDepthOfBinaryTree/MaximumDepthOfBinaryTree1.cpp  
+
+##### 　　C++ Solution 2:
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/104.MaximumDepthOfBinaryTree/MaximumDepthOfBinaryTree2.cpp  
+
+##### 　　C++ Solution 3:
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/104.MaximumDepthOfBinaryTree/MaximumDepthOfBinaryTree3.cpp  
 
 ###  <font color=green>Review</font>
 
