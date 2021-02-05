@@ -110,7 +110,7 @@ https://www.bilibili.com/video/BV1QE411F7gC
 
 　　我们来看下生成器模式的类图：  
 ![hello](/ARTS-30/1.jpg)  
-　　
+
 　　Director类使用Builder对象提供的接口，使得其Construct算法与Builder接口提供的对象的构建与装配分离。  
 
 　　Builder对象完成Product的创建与装配后返回给Director类。  
