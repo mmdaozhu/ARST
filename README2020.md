@@ -33,3 +33,4 @@
 * [ARTS-31](https://github.com/mmdaozhu/ARST/blob/master/ARTS-31.md)
 * [ARTS-32](https://github.com/mmdaozhu/ARST/blob/master/ARTS-32.md)
 * [ARTS-33](https://github.com/mmdaozhu/ARST/blob/master/ARTS-33.md)
+* [ARTS-34](https://github.com/mmdaozhu/ARST/blob/master/ARTS-34.md)
