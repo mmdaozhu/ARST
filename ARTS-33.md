@@ -91,7 +91,7 @@ variadic template | 可变参数模板
 　　Modules will overcome the restrictions of header files. They promise a lot. For example, the separation of header and source files becomes as obsolete as the preprocessor. In the end, we will also have faster build times and an easier way to build packages.  
 　
 ###  <font color=orange>tips: two-phase commit(2PC)</font>
-　　two-phase commit: An operation that is part of a distributed transaction, under the XA specification.  
+　　two-phase commit: an operation that is part of a distributed transaction, under the XA specification.  
 
 #### **【MySQL two-phase commit】**
 　　When committing a transaction, MySQL employs a two-phase commit protocol.  
@@ -107,7 +107,9 @@ variadic template | 可变参数模板
 ###  <font color=orange>Share: 高性能数据库集群：分库分表</font>
 
 #### **【业务分库】**
-　　<b>业务分库指的是按照业务模块将数据分散到不同的数据库服务器</b>下面是其基本架构图。  
+　　<b>业务分库指的是按照业务模块将数据分散到不同的数据库服务器</b>  
+
+　　下面是其基本架构图：  
 ![hello](/ARTS-33/3.jpg)
 
 #### **【业务分库带来的问题】**
