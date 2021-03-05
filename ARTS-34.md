@@ -271,7 +271,7 @@ for i in range(21):
 　　《设计模式》一书中是这样定义的：为其他对象提供一种代理以控制对这个对象的访问。  
 
 　　我们来看下代理模式的类图：  
-![hello](1.jpg)
+![hello](/ARTS-34/1.jpg)
 
 　　被代理类RealObject和代理类Proxy共同实现了Subject接口，这样代理类Proxy就可以替代实体。  
 

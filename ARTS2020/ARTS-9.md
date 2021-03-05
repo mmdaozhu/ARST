@@ -65,7 +65,7 @@ https://www.youtube.com/watch?v=-W9F__D3oY4
 　
 ###  <font color=yellow>tips：Postman的Collection功能</font>
 　　Postman可以通过创建Collection来保存一系列相关Request请求。方便查看、导入导出。  
-![hello](/ARTS-9/1.png)
+![hello](/ARTS2020/ARTS-9/1.png)
 
 ###  <font color=yellow>Share：简析Boost库中的Functional/Factory库</font>
 　　首先先了解一下工厂模式。  

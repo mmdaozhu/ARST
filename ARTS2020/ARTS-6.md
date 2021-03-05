@@ -69,17 +69,17 @@ sophisticated  | adj. 复杂的；精致的；久经世故的；富有经验的
 
 #### **【Comments and Conclusions】**
 　　Load Balancers chart:  
-![hello](/ARTS-6/1.png)  
+![hello](/ARTS2020/ARTS-6/1.png)  
 　　1.Load balancer  
 
-![hello](/ARTS-6/2.png)  
+![hello](/ARTS2020/ARTS-6/2.png)  
 　　2.Multiple load balancers  
 
 　　Load Balancers chart:  
-![hello](/ARTS-6/3.png)  
+![hello](/ARTS2020/ARTS-6/3.png)  
 　　1.Synchronous request  
 
-![hello](/ARTS-6/4.png)  
+![hello](/ARTS2020/ARTS-6/4.png)  
 　　2.Using queues to manage requests  
 
 ###  <font color=orange>tips：高效阅读的秘密</font>

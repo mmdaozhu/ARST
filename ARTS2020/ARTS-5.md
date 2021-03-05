@@ -44,24 +44,24 @@ catastrophic | adj. 灾难的；悲惨的；灾难性的，毁灭性的
 
 #### **【Comments and Conclusions】**
 　　Distributed Cache chart:  
-![hello](/ARTS-5/1.png)  
+![hello](/ARTS2020/ARTS-5/1.png)  
 　　1.Distributed cache  
 
 　　Proxies chart:  
-![hello](/ARTS-5/2.png)  
+![hello](/ARTS2020/ARTS-5/2.png)  
 　　1.Proxy server  
 
-![hello](/ARTS-5/3.png)  
+![hello](/ARTS2020/ARTS-5/3.png)  
 　　2.Using a proxy server to collapse requests  
 
-![hello](/ARTS-5/4.png)  
+![hello](/ARTS2020/ARTS-5/4.png)  
 　　3.Using a proxy to collapse requests for data that is spatially close together  
 
 　　Index chart:  
-![hello](/ARTS-5/5.jpg)  
+![hello](/ARTS2020/ARTS-5/5.jpg)  
 　　1.Indexes  
 
-![hello](/ARTS-5/6.jpg)  	
+![hello](/ARTS2020/ARTS-5/6.jpg)  	
 　　2.Many layers of indexes  
 
 ###  <font color=orange>tips: Linux命令：xargs简介</font>

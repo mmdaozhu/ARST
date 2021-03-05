@@ -104,7 +104,7 @@ https://www.youtube.com/watch?v=-W9F__D3oY4
 　　- @Repeatable - Java 8 开始支持，标识某注解可以在同一个声明上使用多次。  
 
 #### **【Annotation 架构】**
-![hello](/ARTS-8/1.jpg)  
+![hello](/ARTS2020/ARTS-8/1.jpg)  
 　　1. Annotation 就是个接口。  
 　　2. ElementType 是 Enum 枚举类型，它用来指定 Annotation 的类型。例如Java语言中的类、方法、变量、参数和包等被标注。  
 ```java
