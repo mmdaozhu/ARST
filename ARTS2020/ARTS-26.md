@@ -70,7 +70,7 @@ https://www.bilibili.com/video/BV1i7411L7Uj
 
 ##### 中台较精准的定义
 　　中台是为了体现IT技术、IT系统、IT部门的业务价值而诞生的概念  
-![hello](/ARTS-26/1.jpg)
+![hello](/ARTS2020/ARTS-26/1.jpg)
 
 ##### 技术人员需要构建个人的中台应对快速变化
 　　公司创业方向（搜索引擎、容器、轻舟微服务）  
@@ -84,16 +84,16 @@ https://www.bilibili.com/video/BV1i7411L7Uj
 　　个人技术路线  
 　　- 从市场需求出发，还是从个人技能出发？  
 　　- 先看技术前景，再看如何打造个人竞争力，最后才是术。  
-![hello](/ARTS-26/2.jpg)
+![hello](/ARTS2020/ARTS-26/2.jpg)
 
 ##### 以业务为核心的技术体系建设总图
-![hello](/ARTS-26/3.jpg)
+![hello](/ARTS2020/ARTS-26/3.jpg)
 
 ##### 技术体系建设所涉及的架构和流程
-![hello](/ARTS-26/4.jpg)
+![hello](/ARTS2020/ARTS-26/4.jpg)
 
 ##### 以业务为核心的技术体系的演进过程
-![hello](/ARTS-26/5.jpg)
+![hello](/ARTS2020/ARTS-26/5.jpg)
 
 ##### 个人的技术体系建设总图
 　　- 技术前景————看市场需求  
@@ -163,19 +163,19 @@ https://www.bilibili.com/video/BV1i7411L7Uj
 
 　　- 积淀中台能力————有意识的构建可复用能力  
 　　　　- 微服务相关架构  
-![hello](/ARTS-26/6.jpg)
+![hello](/ARTS2020/ARTS-26/6.jpg)
 
-![hello](/ARTS-26/7.jpg)
+![hello](/ARTS2020/ARTS-26/7.jpg)
 
-![hello](/ARTS-26/8.jpg)
+![hello](/ARTS2020/ARTS-26/8.jpg)
 
 ##### 第六：业务层（作者）
-![hello](/ARTS-26/9.jpg)
+![hello](/ARTS2020/ARTS-26/9.jpg)
 
-![hello](/ARTS-26/10.jpg)
+![hello](/ARTS2020/ARTS-26/10.jpg)
 
 ##### 个人的技术体系建设总图
-![hello](/ARTS-26/11.jpg)
+![hello](/ARTS2020/ARTS-26/11.jpg)
 
 ###  <font color=purple>Share: 浅谈单例模式（一）</font>
 
@@ -185,7 +185,7 @@ https://www.bilibili.com/video/BV1i7411L7Uj
 　　单例模式非常好理解，就是一个类只能创建一个实例，客户仅能访问这个类的唯一实例。  
 
 　　下面是单例模式的类图：  
-![hello](/ARTS-26/12.jpg)
+![hello](/ARTS2020/ARTS-26/12.jpg)
 
 　　Singleton类中定义了一个Instance操作，供客户访问它的唯一实例uniqueInstance。  　
 

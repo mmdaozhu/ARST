@@ -109,14 +109,14 @@ https://www.bilibili.com/video/BV1QE411F7gC
 　　《设计模式》一书中是这样定义的：将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。  
 
 　　我们来看下生成器模式的类图：  
-![hello](/ARTS-30/1.jpg)  
+![hello](/ARTS2020/ARTS-30/1.jpg)  
 
 　　Director类使用Builder对象提供的接口，使得其Construct算法与Builder接口提供的对象的构建与装配分离。  
 
 　　Builder对象完成Product的创建与装配后返回给Director类。  
 
 　　接着我们看下生成器模式的交互图：  
-![hello](/ARTS-30/2.jpg)  
+![hello](/ARTS2020/ARTS-30/2.jpg)  
 
 　　过程如下：  
 　　1. aClient创建Director对象，并使用想要的Builder对象进行配置。  

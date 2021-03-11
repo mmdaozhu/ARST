@@ -47,7 +47,7 @@ decay | v. 衰退，衰减；衰败；腐烂，腐朽
 #### **【Comments and Conclusions】**
 
 ##### Overview of C++20 library.
-![hello](/ARTS-36/1.png)
+![hello](/ARTS2020/ARTS-36/1.png)
 
 ##### Calendar and Time-Zone
 　　1. Calendar  
@@ -121,7 +121,7 @@ std::string message = std::format("The answer is {}.", 42);
 　　《设计模式》一书中是这样定义的：动态地给一个对象增加一些额外地职责。就增加功能来说，Decorator模式相比生成子类更为灵活。  
 
 　　我们来看下装饰器模式的类图：  
-![hello](/ARTS-36/2.jpg)
+![hello](/ARTS2020/ARTS-36/2.jpg)
 
 #### **【装饰器模式的优点】**
 　　1. 比静态继承更灵活：采用组合的方式灵活地向对象增加职责。可以用增加和分离的方法，在运行时增加和删除职责。  

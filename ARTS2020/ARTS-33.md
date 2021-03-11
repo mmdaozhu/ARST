@@ -19,7 +19,7 @@ tags:
 　　Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively.  
 
 ##### 　　Example 1:
-![hello](/ARTS-33/1.jpg)  
+![hello](/ARTS2020/ARTS-33/1.jpg)  
 ```sh
 Input: n = 4
 Output: [[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]
@@ -57,7 +57,7 @@ variadic template | 可变参数模板
 #### **【Comments and Conclusions】**
 
 ##### historical context of C++ standards
-![hello](/ARTS-33/2.png)  
+![hello](/ARTS2020/ARTS-33/2.png)  
 
 ##### C++98
 　　C++98 had a few important features: templates, the standard template library (STL) with its containers and algorithms, strings, and IO streams.  
@@ -110,7 +110,7 @@ variadic template | 可变参数模板
 　　<b>业务分库指的是按照业务模块将数据分散到不同的数据库服务器</b>  
 
 　　下面是其基本架构图：  
-![hello](/ARTS-33/3.jpg)
+![hello](/ARTS2020/ARTS-33/3.jpg)
 
 #### **【业务分库带来的问题】**
 
@@ -129,7 +129,7 @@ variadic template | 可变参数模板
 
 #### **【分表】**
 　　单表数据拆分有两种方式：<b>垂直分表和水平分表</b>。示意图如下：  
-![hello](/ARTS-33/4.jpg)  
+![hello](/ARTS2020/ARTS-33/4.jpg)  
 
 #### **【垂直分表】**
 　　垂直分表适合将表中某些不常用且占了大量空间的列拆分出去。  
@@ -169,7 +169,7 @@ variadic template | 可变参数模板
 　　分库分表的实现除了要判断操作类型外，还要判断 SQL 中具体需要操作的表、操作函数（例如 count 函数)、order by、group by 操作等，然后再根据不同的操作进行不同的处理。  
 
 #### **【脑图】**
-![hello](/ARTS-33/分库分表.png)  
+![hello](/ARTS2020/ARTS-33/分库分表.png)  
 
 #### **【思考题】**
 　　你认为什么时候引入分库分表是合适的？是数据库性能不够的时候就开始分库分表么？  

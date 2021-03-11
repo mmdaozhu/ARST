@@ -17,14 +17,14 @@ tags:
 　　Each word must be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.  
 
 ##### 　　Example 1:
-![hello](/ARTS-35/1.jpg)
+![hello](/ARTS2020/ARTS-35/1.jpg)
 ```sh
 Input: board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], words = ["oath","pea","eat","rain"]
 Output: ["eat","oath"]
 ```
 
 ##### 　　Example 2:
-![hello](/ARTS-35/2.jpg)
+![hello](/ARTS2020/ARTS-35/2.jpg)
 ```sh
 Input: board = [["a","b"],["c","d"]], words = ["abcb"]
 Output: []
@@ -48,7 +48,7 @@ sophisticated | adj. 复杂的；精致的
 #### **【Comments and Conclusions】**
 
 ##### Overview of the core language
-![hello](/ARTS-35/4.png)
+![hello](/ARTS2020/ARTS-35/4.png)
 
 ##### The three-way Comparison operator <=>
 　　The three-way comparison operator <=> is often just called spaceship operator. The spaceship operator determines for two values A  and B whether A < B, A = B, or A > B.  
@@ -290,7 +290,7 @@ int main() {
 　　《设计模式》一书中是这样定义的：将抽象部分与它的实现部分分离，使它们可以独立地变化。  
 
 　　我们来看下桥接模式的类图：  
-![hello](/ARTS-35/3.jpg)  
+![hello](/ARTS2020/ARTS-35/3.jpg)  
 
 　　Abstraction是定义抽象类的接口，拥有一个执行Implementor类型对象的指针。  
 

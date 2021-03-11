@@ -17,7 +17,7 @@ tags:
 　　According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”  
 
 ##### 　　Example 1:
-![hello](/ARTS-29/1.png)
+![hello](/ARTS2020/ARTS-29/1.png)
 ```sh
 Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
 Output: 3
@@ -25,7 +25,7 @@ Explanation: The LCA of nodes 5 and 1 is 3.
 ```
 
 ##### 　　Example 2:
-![hello](/ARTS-29/2.png)
+![hello](/ARTS2020/ARTS-29/2.png)
 ```sh
 Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
 Output: 5
@@ -100,7 +100,7 @@ https://www.bilibili.com/video/BV1f7411T7hQ
 　　《设计模式》一书中是这样定义的：提供一个接口以创建一系列相关或相互依赖的对象，而无须指定它们具体的类。  
 
 　　我们来看下工厂方法的类图：  
-![hello](/ARTS-29/3.jpg)
+![hello](/ARTS2020/3.jpg)
 
 　　AbstractFactory提供了一个接口来创建相关的AbstractProductA和AbstractProductB对象。Client通过不同的ConcreteFactory类的接口，创建不同的ProductA和ProductB对象。  
 

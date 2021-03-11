@@ -196,7 +196,7 @@ https://www.bilibili.com/video/BV1C7411F7x3
 ##### 3. 找到方法，事半功倍
 
 ###### 主动学习 VS 被动学习
-![hello](/ARTS-23/1.png)
+![hello](/ARTS2020/ARTS-23/1.png)
 　　- 翻译一本书  
 　　- 比较多种语言的实现  
 

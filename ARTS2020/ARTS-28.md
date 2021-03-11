@@ -17,7 +17,7 @@ tags:
 　　According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”  
 
 ##### 　　Example 1:
-![hello](/ARTS-28/1.png)
+![hello](/ARTS2020/ARTS-28/1.png)
 ```sh
 Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
 Output: 6
@@ -25,7 +25,7 @@ Explanation: The LCA of nodes 2 and 8 is 6.
 ```
 
 ##### 　　Example 2:
-![hello](/ARTS-28/2.png)
+![hello](/ARTS2020/ARTS-28/2.png)
 ```sh
 Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
 Output: 2
@@ -149,7 +149,7 @@ https://www.bilibili.com/video/BV1L7411j7CN
 　　工厂方法封装了对象的创建，客户无需关心对象的创建过程就能够获取相应的对象。  
 
 　　我们来看下工厂方法的类图：  
-![hello](/ARTS-28/3.jpg)
+![hello](/ARTS2020/ARTS-28/3.jpg)
 
 　　客户通过Creator的子类ConcreteCreator提供的AnOperation()接口，委派FactoryMethod()方法实例化特定的ConcreteProduct子类。如果客户需要ConcreteProductB子类，我们就不得不创建Creator的子类ConcreteCreatorB。不过在c++中可以使用模板避免。  
 
