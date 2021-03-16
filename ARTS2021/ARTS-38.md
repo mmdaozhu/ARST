@@ -43,7 +43,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 ```
 
 ##### 　　C++ Solution:
-https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/  
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/122.BestTimeToBuyAndSellStockII/BestTimeToBuyAndSellStockII.cpp  
 
 ###  <font color=yellow>Review</font>
 
