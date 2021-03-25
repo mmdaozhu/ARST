@@ -35,8 +35,11 @@ Explanation: There are three ways to climb to the top.
 3. 2 steps + 1 step
 ```
 
-##### 　　C++ Solution:
-https://github.com/mmdaozhu/leetcode/blob/master/cpp/070.ClimbingStairs/ClimbingStairs.cpp  
+##### 　　C++ Solution 1:
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/070.ClimbingStairs/ClimbingStairs1.cpp  
+
+##### 　　C++ Solution 2:
+https://github.com/mmdaozhu/leetcode/blob/master/cpp/070.ClimbingStairs/ClimbingStairs2.cpp  
 
 ###  <font color=yellow>Review</font>
 

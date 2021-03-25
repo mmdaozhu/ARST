@@ -7,9 +7,11 @@ tags:
 	- ARST
 ---
 
-###  <font color=blue>Algorithm</font>
+###  <font color=indigo>Algorithm</font>
 
 #### **【LeetCode:64. Minimum Path Sum】**
+
+##### 　　Description:
 　　Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path.  
 
 　　Note: You can only move either down or right at any point in time.  
@@ -30,7 +32,7 @@ Output: 12
 ##### 　　C++ Solution:
 https://github.com/mmdaozhu/leetcode/blob/master/cpp/064.MinimumPathSum/MinimumPathSum.cpp  
 
-###  <font color=blue>Review</font>
+###  <font color=indigo>Review</font>
 
 #### **【Article】**
 https://github.com/donnemartin/system-design-primer  
@@ -63,7 +65,7 @@ centralize | vt. 使集中；使成为…的中心
 　　Introducing a reverse proxy results in increased complexity.  
 　　A single reverse proxy is a single point of failure, configuring multiple reverse proxies (ie a failover) further increases complexity.  
 　
-###  <font color=blue>tips: 惊呆！Python 竟然还有这样的黑魔法！</font>
+###  <font color=indigo>tips: 惊呆！Python 竟然还有这样的黑魔法！</font>
 
 https://www.bilibili.com/video/BV1FJ411J7CR  
 
@@ -355,7 +357,7 @@ pip install autopep8
 ```
 
 
-###  <font color=blue>Share: c++ STL库下的迭代器模式</font>
+###  <font color=indigo>Share: c++ STL库下的迭代器模式</font>
 　　迭代器模式（Iterator Design Pattern），也叫作游标模式（Cursor Design Pattern）。  
 
 　　迭代器是用来遍历集合对象。这里说的“集合对象”也可以叫“容器”“聚合对象”，实际上就是包含一组对象的对象，比如数组、链表、树、图、跳表。迭代器模式将集合对象的遍历操作从集合类中拆分出来，放到迭代器类中，让两者的职责更加单一。  
