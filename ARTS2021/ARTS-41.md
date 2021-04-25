@@ -7,7 +7,7 @@ tags:
 	- ARST
 ---
 
-###  <font color=yellow>Algorithm</font>
+###  <font color=green>Algorithm</font>
 
 #### **【LeetCode:309. Best Time to Buy and Sell Stock with Cooldown】**
 
@@ -36,7 +36,7 @@ Output: 0
 ##### 　　C++ Solution:
 https://github.com/mmdaozhu/leetcode/blob/master/cpp/309.BestTimeToBuyAndSellStockWithCooldown/BestTimeToBuyAndSellStockWithCooldown.cpp  
 
-###  <font color=yellow>Review</font>
+###  <font color=green>Review</font>
 
 #### **【Article】**
 https://www.modernescpp.com/index.php/c-20-concepts-the-placeholder-syntax  
@@ -206,7 +206,7 @@ int main() {
 
 　　The concept Integral in line 1 can be used as a return type (line 2), in a range-based for-loop (line 3), or as a type for the variable b (line 4) or the variable integ (line 5). To see the symmetry, line 6 uses type-deduction with auto instead. I have to admit that there is now no compiler available, which can compile completely the proposed concepts syntax which I used in my example.  
 
-###  <font color=yellow>tips: c++面试（二）</font>
+###  <font color=green>tips: c++面试（二）</font>
 
 #### **【c++笔试题】**
 　　1. 以数组名作函数参数时,实参数组与形参数组都不必定义长度,因此实参与形参的结合方式是地址结合,与数组长度无关。请问这句话的说法是正确的吗？  
@@ -274,10 +274,10 @@ D. fo = fopen("a.txt", "w"); fwrite("helloworld", 10, 1, fo); // 全缓冲
 
 　　单例模式一般用于配置全局类、ID生成器等等。  
 
-##### 2. 单例模式有哪几种实现方式
+##### 2. 单例模式有哪几种实现方式？
 　　单例模式有饿汉式和懒汉式。  
 
-###  <font color=yellow>Share: 高性能负载均衡：分类及架构</font>
+###  <font color=green>Share: 高性能负载均衡：分类及架构</font>
 　　<b>高性能集群的复杂性主要体现在需要增加一个任务分配器，以及为任务选择一个合适的任务分配算法。</b>  
 
 　　实际上任务分配并不只是考虑计算单元的负载均衡，不同的任务分配算法目标是不一样的，有的基于负载考虑，有的基于性能（吞吐量、响应时间）考虑，有的基于业务考虑。<b>负载均衡不只是为了计算单元的负载达到均衡状态。</b>  
